@@ -2,20 +2,20 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <title>1v1.rev</title>
+    <title>1v1.REV</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body style="margin: 0; background-color: black; overflow: hidden;">
     <div id="gameContainer" style="width: 100vw; height: 100vh;"></div>
     
     <script src="js/UnityLoader.js"></script>
-    
     <script>
+      // The instructions for the loading bar
       function UnityProgress(gameInstance, progress) {
         if (!gameInstance.Module) return;
       }
 
-      // This tells the engine to use your new config.json map
+      // The instruction to start the game using your config.json map
       var gameInstance = UnityLoader.instantiate("gameContainer", "config.json", {
         onProgress: UnityProgress
       });
