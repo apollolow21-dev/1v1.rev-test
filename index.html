@@ -9,15 +9,15 @@
     <div id="gameContainer" style="width: 100vw; height: 100vh;"></div>
     
     <script src="js/UnityLoader.js"></script>
-    
     <script>
-      function UnityProgress(gameInstance, progress) {
-        if (!gameInstance.Module) return;
-      }
-
-      // This tells the engine to use the config.json map
-      var gameInstance = UnityLoader.instantiate("gameContainer", "config.json", {
-        onProgress: UnityProgress
+      var gameInstance = UnityLoader.instantiate("gameContainer", "js/UnityLoader.js", {
+        Module: {
+          dataUrl: "data.20f78d3edff0e",
+          codeUrl: "js/UnityLoader.js",
+          asmJsUrl: "js/UnityLoader.js",
+          asmUrl: "js/UnityLoader.js",
+          memUrl: "js/UnityLoader.js",
+        }
       });
     </script>
   </body>
