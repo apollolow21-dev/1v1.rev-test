@@ -9,13 +9,13 @@
     <div id="gameContainer" style="width: 100vw; height: 100vh;"></div>
     
     <script src="js/UnityLoader.js"></script>
+    
     <script>
-      // The instructions for the loading bar
       function UnityProgress(gameInstance, progress) {
         if (!gameInstance.Module) return;
       }
 
-      // The instruction to start the game using your config.json map
+      // This tells the engine to use the config.json map
       var gameInstance = UnityLoader.instantiate("gameContainer", "config.json", {
         onProgress: UnityProgress
       });
