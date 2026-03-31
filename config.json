@@ -1,0 +1,9 @@
+{
+  "canvasID": "gameContainer",
+  "dataUrl": "data.20f78d3edff0e",
+  "wasmCodeUrl": "js/UnityLoader.js",
+  "wasmFrameworkUrl": "js/UnityLoader.js",
+  "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+  "compatibilityCheck": false,
+  "backgroundColor": "#000000"
+}
