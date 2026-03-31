@@ -2,29 +2,22 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <title>1v1.REV</title>
+    <title>1v1.rev</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body style="margin: 0; background-color: black; overflow: hidden;">
     <div id="gameContainer" style="width: 100vw; height: 100vh;"></div>
     
     <script src="js/UnityLoader.js"></script>
+    
     <script>
       function UnityProgress(gameInstance, progress) {
         if (!gameInstance.Module) return;
       }
 
-      var gameInstance = UnityLoader.instantiate("gameContainer", "js/UnityLoader.js", {
-        onProgress: UnityProgress,
-        Module: {
-          dataUrl: "data.20f78d3edff0e",
-          codeUrl: "js/UnityLoader.js",
-          asmJsUrl: "js/UnityLoader.js",
-          asmUrl: "js/UnityLoader.js",
-          memUrl: "js/UnityLoader.js",
-          // This line below is the secret fix for that JSON error
-          webglContextAttributes: {"preserveDrawingBuffer": true},
-        }
+      // This tells the engine to use your new config.json map
+      var gameInstance = UnityLoader.instantiate("gameContainer", "config.json", {
+        onProgress: UnityProgress
       });
     </script>
   </body>
