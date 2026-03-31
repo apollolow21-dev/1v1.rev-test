@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <title>1v1.rev</title>
+    <title>1v1.REV</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body style="margin: 0; background-color: black; overflow: hidden;">
@@ -18,9 +18,12 @@
         onProgress: UnityProgress,
         Module: {
           dataUrl: "data.20f78d3edff0e",
-          codeUrl: "data.5485d541533ea", // Pointing to the code data file
-          asmJsUrl: "data.c033a768838a4", // Pointing to the asm data file
-          memUrl: "data.eb1dffd4331d2",   // Pointing to the mem data file
+          codeUrl: "js/UnityLoader.js",
+          asmJsUrl: "js/UnityLoader.js",
+          asmUrl: "js/UnityLoader.js",
+          memUrl: "js/UnityLoader.js",
+          // This line below is the secret fix for that JSON error
+          webglContextAttributes: {"preserveDrawingBuffer": true},
         }
       });
     </script>
